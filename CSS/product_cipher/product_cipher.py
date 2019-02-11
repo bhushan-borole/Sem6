@@ -22,19 +22,6 @@ def dec_substitution(text, k):
 	return p
 
 
-def enc_rail_fence(text, k):
-	rail = [""] * k
-	layer = 0
-	for t in cipher:
-	    rail[layer] += t
-	    #print(rail)
-	    if layer >= k - 1:
-	        layer = 0
-	    else:
-	        layer += 1
-	return ''.join(rail)
-
-
 def create_rail(text, k):
 	rail = [""] * k
 	layer = 0
